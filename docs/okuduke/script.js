@@ -35,7 +35,9 @@ const clearCanvas = () => {
 
 // draw texts
 const drawTexts = () => {
-  canvasContext.font = 'bold 60px "Noto Sans JP", sans-serif';
+  const $fontSize = document.getElementById('fontSize');
+
+  canvasContext.font = `bold ${$fontSize.value}px "Noto Sans JP", sans-serif`;
   canvasContext.strokeStyle = '#333333';
 
   // 見出し
