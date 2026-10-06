@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+    <title>奥付けジェネレータ</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="previewArea">
+        <canvas id="previewCanvas"></canvas>
+      </div>
+      <div class="inputArea">
+        <h1>奥付けジェネレータ</h1>
+        <div>
+          <div>
+            <p>タイトル</p>
+            <label class="inputItemLabel">
+              <input class="inputItem js-inputItem is-inline" id="mainTitle" value="Art Work" style="width: 200px" />
+            </label>
+          </div>
+          <hr />
+          <p>発行日</p>
+
+          <label class="inputItemLabel">
+            年
+            <input class="inputItem js-inputItem" id="publishDateYear" type="number" min="2025" max="2030" />
+          </label>
+
+          <label class="inputItemLabel">
+            月
+            <input class="inputItem js-inputItem" id="publishDateMonth" type="number" min="1" max="12" />
+          </label>
+
+          <label class="inputItemLabel">
+            日
+            <input class="inputItem js-inputItem" id="publishDateDay" type="number" min="1" max="31" />
+          </label>
+          <hr />
+          <a class="downloadButton js-dlButton" download="okuduke.png">ダウンロード</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック', 'Yu Gothic', sans-serif;
+}
+
+.wrapper {
+  padding: 24px;
+}
+
+.previewArea,
+.inputArea {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.previewArea {
+  border: 1px solid #ccc;
+  margin-right: 24px;
+}
+
+.previewArea,
+.previewArea canvas {
+  width: calc(1050px / 5 * 2);
+  height: calc(1485px / 5 * 2);
+  aspect-ratio: 1050 / 1485;
+}
+
+.inputArea {
+  width: calc(100% - 700px);
+}
+
+.previewArea {
+  /* background-image: url(./okuduke_2025_April_Fantasy_01.png);
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 100%; */
+}
+
+.inputItemLabel {
+  padding: 12px 0;
+  display: inline-block;
+}
+.inputItem {
+  display: block;
+  height: 40px;
+  padding: 4px;
+  min-width: 100px;
+}
+
+.inputItem.is-inline {
+  display: inline-block;
+}
