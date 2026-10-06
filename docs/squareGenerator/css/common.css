@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 0;
+}
+
+.mainTitle {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.previewWrapper,
+.inputArea {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.previewWrapper {
+  width: 49%;
+}
+
+.previewInner {
+  border: 1px solid #000;
+  aspect-ratio: 210/ 297;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.previewImageItem {
+  display: inline-block;
+  width: 28%;
+  margin: 6px;
+  aspect-ratio: 1/ 1;
+  border: 1px solid #000;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.previewImage {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.inputArea {
+  width: 40%;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+.inputItem {
+  padding: 12px;
+}
+
+#printBtn {
+  margin-top: 12px;
+  appearance: none;
+  padding: 8px 48px;
+  display: block;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
+
+  .previewWrapper {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .previewInner {
+    border: none;
+    padding: 0;
+  }
+  .previewImageItem {
+    flex-basis: 21%;
+  }
+}
