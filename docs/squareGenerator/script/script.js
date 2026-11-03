@@ -17,6 +17,16 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('printBtn').addEventListener('click', () => {
     window.print();
   });
+
+  const $sizeChangerElements = document.querySelectorAll('input[name="sizeChanger"]');
+  $sizeChangerElements.forEach(($el, _index) => {
+    $el.addEventListener('change', (event) => {
+      onChangeItemSize(event.target.value);
+    });
+  });
+
+  // init
+  onChangeItemSize('large');
 });
 
 const onChangeImage = (_event, _index) => {
@@ -32,7 +42,6 @@ const renderImages = () => {
   const imgElements = document.querySelectorAll('.previewImage');
 
   imgElements.forEach(($el, _index) => {
-    console.log($el, 30, STORE.images[_index]);
     $el.src = STORE.images[_index] || DEFAULT_IMG;
   });
 };
@@ -44,4 +53,18 @@ const setupDefaultImage = () => {
   });
 
   renderImages();
+};
+
+const onChangeItemSize = (_size) => {
+  console.log({ _size });
+
+  const $previewElement = document.querySelector('.previewWrapper');
+
+  if (_size === 'large') {
+    $previewElement.classList.add('is-large');
+    $previewElement.classList.remove('is-small');
+  } else {
+    $previewElement.classList.add('is-small');
+    $previewElement.classList.remove('is-large');
+  }
 };
